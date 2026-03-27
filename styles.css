@@ -51,7 +51,8 @@ body {
 }
 
 .hero-inner { padding: 5rem 0; }
-.logo { height: 80px; }
+
+.logo { height: 200px; }
 
 h1 { font-size: clamp(2.6rem, 5vw, 5rem); }
 h2 { font-size: clamp(2rem, 3vw, 3rem); }
@@ -170,5 +171,17 @@ h3 { font-size: 1.4rem; }
 
   .image-inner {
     justify-content: center;
+  }
+
+  .beer-card-main {
+    grid-template-columns: 1fr;
+  }
+
+  .beer-card-thumb {
+    justify-content: flex-start;
+  }
+
+  .beer-card-thumb img {
+    max-width: 80px;
   }
 }
