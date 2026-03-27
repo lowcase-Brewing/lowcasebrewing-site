@@ -71,6 +71,18 @@ h3 { font-size: 1.4rem; }
   border: 1px solid var(--border);
 }
 
+.detail-card {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* image | text */
+  gap: 2rem;
+  padding: 1.8rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  align-items: center; /* vertically aligns text with image */
+}
+
 .image-inner {
   width: 70%;          /* controls size */
   max-width: 220px;    /* prevents it from getting too big */
@@ -103,5 +115,16 @@ h3 { font-size: 1.4rem; }
 }
 
 @media (max-width: 768px) {
-  .grid-3, .grid-cards { grid-template-columns: 1fr; }
+  .grid-3, .grid-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .image-inner {
+    justify-content: center;
+  }
 }
