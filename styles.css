@@ -71,6 +71,18 @@ h3 { font-size: 1.4rem; }
   border: 1px solid var(--border);
 }
 
+.image-inner {
+  width: 70%;          /* controls size */
+  max-width: 220px;    /* prevents it from getting too big */
+  margin: 0 auto;      /* centers it */
+}
+
+.image-inner img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .series-dark {
   background: var(--night);
   color: white;
