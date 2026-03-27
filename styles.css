@@ -108,6 +108,24 @@ h3 { font-size: 1.4rem; }
   align-items: center; /* vertically aligns text with image */
 }
 
+.detail-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a8a29e;
+  font-weight: 600;
+}
+
+.detail-text {
+  margin-top: 0rem;
+  color: #44403c;
+  line-height: 1.6;
+}
+
+.detail-columns > div {
+  margin-bottom: 0.8rem;
+}
+
 .image-inner {
   width: 70%;          /* controls size */
   max-width: 220px;    /* prevents it from getting too big */
@@ -135,8 +153,28 @@ h3 { font-size: 1.4rem; }
   color: #d6d3d1;
 }
 
-.beer-style { color: var(--text-soft); }
-.beer-vibe { margin-top: 0.5rem; }
+.series-dark .detail-label {
+  color: #d6d3d1;
+}
+
+.series-dark .detail-text {
+  color: #e7e5e4;
+}
+
+.series-dark .detail-columns {
+  color: #d6d3d1;
+}
+
+.beer-style {
+  color: var(--text-soft);
+  font-size: large;
+  font-display: inline-block;
+  }
+
+.beer-vibe { 
+  margin-top: 0.5rem;
+  font-style: oblique;
+}
 
 .beer-card-main {
   display: grid;
