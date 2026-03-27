@@ -29,6 +29,15 @@ body {
   color: var(--text);
 }
 
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #a8a29e; /* softer gray */
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
 .container {
   width: min(var(--max), calc(100% - 2rem));
   margin: 0 auto;
@@ -93,6 +102,7 @@ h3 { font-size: 1.4rem; }
   width: 100%;
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
 }
 
 .series-dark {
@@ -103,6 +113,10 @@ h3 { font-size: 1.4rem; }
 .series-dark .beer-card {
   background: var(--card-dark);
   border: 1px solid var(--border-dark);
+}
+
+.series-dark .eyebrow {
+  color: #d6d3d1;
 }
 
 .beer-style { color: var(--text-soft); }
