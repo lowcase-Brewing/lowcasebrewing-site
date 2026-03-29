@@ -3,8 +3,8 @@
 /* ========================= */
 
 :root {
-  --bg: #f7f4ef;
-  --bg-soft: #fcfaf6;
+  --bg: #d8eedc;
+  --bg-soft: #d8eedc;
   --card: rgba(255,255,255,0.82);
   --card-dark: rgba(255,255,255,0.06);
   --text: #292524;
@@ -22,9 +22,20 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* body {
+  margin: 0;
+  font-family: Monserrat, system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+ */
+
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
   background: var(--bg);
   color: var(--text);
 }
@@ -61,7 +72,8 @@ body {
 .section { padding: 4rem 0; }
 
 .hero {
-  background: linear-gradient(135deg, #f5f5f4 0%, #fff7ed 45%, #f0f9ff 100%);
+  /* background: linear-gradient(135deg, #f5f5f4 0%, #fff7ed 45%, #f0f9ff 100%); */
+  background: #d8eedc;
   border-bottom: 1px solid var(--border);
 }
 
