@@ -10,11 +10,11 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    img-src 'self' https://www.googletagmanager.com data:;
+    img-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net;
     style-src 'self' 'unsafe-inline';
     font-src 'self';
-    script-src 'self';
-    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://region1.google-analytics.com; img-src https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net;
+    script-src 'self' https://www.googletagmanager.com;
+    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://region1.google-analytics.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
