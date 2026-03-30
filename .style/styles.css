@@ -252,3 +252,54 @@ h3 { font-size: 1.4rem; }
     max-width: 80px;
   }
 }
+
+.blog-link-wrap {
+  margin-top: 1.5rem;
+}
+
+.blog-link-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(28, 25, 23, 0.12);
+}
+
+.blog-link-logo {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.blog-link-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.blog-link-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .blog-link-card {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .blog-link-logo {
+    width: 90px;
+  }
+}
