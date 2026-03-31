@@ -1,17 +1,41 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>lowcase Brewing Blog</title>
   <meta name="description" content="The lowcase Brewing blog — beer builds, label art, recipes, and brand updates." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href=".style/styles.css" />
+  <link rel="icon" href="favicon.ico">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net;
+    style-src 'self' 'unsafe-inline';
+    font-src 'self';
+    script-src 'self' https://www.googletagmanager.com;
+    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://region1.google-analytics.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;">
+<!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWKE25W3J4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VWKE25W3J4');
+</script>
+<!-- End Google Analytics -->
 </head>
 <body>
   <header class="hero" id="top">
     <div class="container hero-inner">
       <a href="index.html">
-        <img src="images/lowcase-logo.png" alt="lowcase Brewing logo" class="logo" />
+        <img src="images/lowcase-blog.png" alt="lowcase Brewing logo" class="logo" />
       </a>
       <div class="pill">lowcase Brewing • Blog</div>
       <h1>Stories from the trail, the water, and the brew day.</h1>
@@ -84,6 +108,118 @@
       </article>
     </div>
   </section>
+
+  <section class="section blog-post">
+    <div class="container">
+
+      <div class="series-header">
+        <div class="eyebrow">Behind the beer</div>
+        <h2>Designing the Motion Series</h2>
+        <p class="series-copy">
+        The spirit of everyday motion in a beer.
+        </p>
+      </div>
+
+      <div class="card" style="max-width: 700px;">
+        <p>
+        The idea behind the Motion Series was to create a lineup of beers that capture the feeling of
+        being in motion—whether that’s hiking, biking, fishing, or just moving through the day. Each beer
+        is designed to evoke a different aspect of that experience, from the slow, rhythmic pace of a calm
+        morning to the energetic rush of an afternoon adventure. The goal was to create a cohesive family
+        of beers that feel connected but also have their own distinct personalities and flavor profiles.
+        <br><br>
+        The design process was all about finding the right balance between simplicity and storytelling.
+        We wanted the labels to be visually striking and immediately recognizable, but also to convey a sense
+        of place and mood. The monkeys became a central part of that story—they’re not just mascots, they’re
+        characters that embody the spirit of each beer and the overall vibe of the brand.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section blog-post">
+    <div class="container">
+
+    <!-- HEADER -->
+    <div class="series-header">
+      <div class="eyebrow">Brew log</div>
+      <h2>Brew Log #001 — El Pescador Pils</h2>
+      <p class="series-copy">
+        A crisp, clean pilsner built for early mornings, calm water, and the first cast of the day.
+      </p>
+    </div>
+
+    <!-- MAIN CARD -->
+    <div class="detail-card">
+
+      <!-- IMAGE -->
+      <div class="image-slot">
+        <div class="image-inner">
+          <img src="images/el-pescador-pils.png" alt="El Pescador Pils label">
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="blog-content">
+
+        <!-- QUICK STATS -->
+        <div class="blog-meta">
+          <div><strong>Style:</strong> Pilsner (Lager)</div>
+          <div><strong>Series:</strong> Motion</div>
+          <div><strong>ABV:</strong> ~5.0%</div>
+          <div><strong>IBU:</strong> ~25</div>
+          <div><strong>Status:</strong> v1 concept</div>
+          <br>
+        </div>
+
+        <!-- SECTIONS -->
+        <div class="detail-columns">
+
+          <div>
+            <div class="detail-label">The idea</div>
+            <div class="detail-text">
+              El Pescador Pils was one of the first beers that felt like it truly belonged in the lowcase lineup.
+              It’s built around the rhythm of the Valley—early mornings, still water, and the kind of patience that
+              comes with fishing before the day really starts.
+            </div>
+          </div>
+
+          <div>
+            <div class="detail-label">The build</div>
+            <div class="detail-text">
+              This is a traditional pilsner approach: clean fermentation, restrained hopping, and a focus on clarity
+              and balance. Nothing flashy, nothing overworked—just a beer that does exactly what it’s supposed to do.
+            </div>
+          </div>
+
+          <div>
+            <div class="detail-label">Flavor direction</div>
+            <div class="detail-text">
+              Light malt backbone with a subtle herbal hop character and a crisp, dry finish. The goal is maximum
+              drinkability—something you can sip slowly or crush without thinking too much about it.
+            </div>
+          </div>
+
+          <div>
+            <div class="detail-label">Visual direction</div>
+            <div class="detail-text">
+              The label leans into sunrise tones and coastal calm—soft gold light reflecting off the water, a quiet
+              harbor scene, and a monkey posted up fishing. It’s not about motion here, it’s about focus.
+            </div>
+          </div>
+
+          <div>
+            <div class="detail-label">Where it fits</div>
+            <div class="detail-text">
+              This is technically part of the Motion series, but it sits at the slowest end of that spectrum.
+              It’s not about speed—it’s about rhythm, patience, and being present in the moment.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <footer>
     <div class="container footer-inner">

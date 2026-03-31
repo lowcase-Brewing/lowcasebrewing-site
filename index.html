@@ -3,604 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>lowcase Brewing</title>
-  <meta name="description" content="lowcase Brewing — Trail-tested. Texas-tuned." />
-  <link rel="stylesheet" href=".style/styles.css" />
-  <link rel="icon" href="favicon.ico">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    img-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net;
-    style-src 'self' 'unsafe-inline';
-    font-src 'self';
-    script-src 'self' https://www.googletagmanager.com;
-    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://region1.google-analytics.com;
-    object-src 'none';
-    base-uri 'self';
-    form-action 'self';
-    frame-ancestors 'none';
-    upgrade-insecure-requests;">
-<!-- Google Analytics (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWKE25W3J4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <title>lowcase Brewing — Coming Soon</title>
+  <meta name="description" content="lowcase Brewing — Coming soon from Weslaco, Texas." />
 
-  gtag('config', 'G-VWKE25W3J4');
-</script>
-<!-- End Google Analytics -->
+  <!-- Optional: keep if you still have global styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Self-contained styles to ensure this page renders correctly on its own -->
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --text: #292524;
+      --text-soft: #57534e;
+      --border: #e7e5e4;
+      --accent: #92400e;
+      --shadow: 0 18px 50px rgba(28,25,23,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, #f5f5f4 0%, #fff7ed 45%, #f0f9ff 100%);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* soft glow accents */
+    .page::before,
+    .page::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(80px);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .page::before {
+      width: 320px;
+      height: 320px;
+      background: #fde68a;
+      left: -80px;
+      top: 60px;
+    }
+
+    .page::after {
+      width: 360px;
+      height: 360px;
+      background: #bae6fd;
+      right: -80px;
+      top: -40px;
+    }
+
+    .card {
+      position: relative;
+      width: min(720px, 100%);
+      padding: 3rem 2rem;
+      border-radius: 32px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .logo {
+      height: 110px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 0.75rem;
+    }
+
+    .tagline {
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #78716c;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: -0.04em;
+    }
+
+    .copy {
+      max-width: 560px;
+      margin: 1.25rem auto 0;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+    }
+
+    .pill {
+      display: inline-block;
+      margin-top: 1.75rem;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid #d6d3d1;
+      background: rgba(255,255,255,0.75);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #57534e;
+    }
+
+    .footer {
+      margin-top: 1.75rem;
+      font-size: 0.95rem;
+      color: #57534e;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 2.25rem 1.25rem;
+      }
+
+      .logo {
+        height: 85px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="hero" id="top">
-  <div class="container hero-inner">
+  <main class="page">
+    <div class="card">
 
-    <div class="brand-row">
-      <div class="brand-left">
-        <img src="images/lowcase-logo.png" alt="lowcase Brewing logo" class="logo" />
-      </div>
+      <img src="images/lowcase-logo.png" alt="lowcase Brewing logo" class="logo" />
 
-      <div class="brand-right">
-        <a href="blog.html" class="blog-badge">
-          <img src="images/lowcase-blog.png" alt="lowcase Brewing Blog" />
-        </a>
-      </div>
+      <div class="tagline">lowcase Brewing • Trail Tested • Texas Tuned</div>
+
+      <h1>Coming Soon</h1>
+
+      <p class="copy">
+        lowcase Brewing is getting ready to launch. We’re dialing in recipes, refining the lineup, and building
+        something worth the wait—from the outdoors of Washington to the laid-back rhythm of South Texas.
+      </p>
+
+      <div class="pill">Beer for slow days • good company • wherever the trail leads</div>
+
+      <div class="footer">Weslaco, Texas</div>
+
     </div>
-
-    <div class="brand-tagline">
-      lowcase Brewing • Trail Tested • Texas Tuned
-    </div>
-
-    <h1>Beer for slow days, good company, and wherever the trail leads.</h1>
-
-    <p class="lead">
-      Born from a love of the outdoors in Washington and rooted in the laid-back rhythm of Weslaco, Texas,
-      lowcase Brewing is a state of mind: outdoors, no ego, just good beer and good company.
-    </p>
-
-    <div class="button-row">
-      <a class="button primary" href="#motion">Explore the lineup</a>
-      <a class="button secondary" href="#story">Our story</a>
-    </div>
-  </div>
-  </header>
-
-  <section class="section">
-    <div class="container grid-3">
-      <article class="card">
-        <div class="eyebrow">The idea</div>
-        <h3>lowcase is a state of mind.</h3>
-        <p>Relaxed, outdoors, no ego—just a grill going, friends showing up, and a cold beer in your hand.</p>
-      </article>
-      <article class="card">
-        <div class="eyebrow">The origin</div>
-        <h3>From The Mountains to The Valley.</h3>
-        <p>Northwest mountain air, coastal trails, backyard fogatas, and the easy Valley vibe all show up in our beers and label art.</p>
-      </article>
-      <article class="card">
-        <div class="eyebrow">The structure</div>
-        <h3>Motion & Stillness.</h3>
-        <p>The lineup splits into two worlds: active, sunlit beers built for movement and darker pours made for slowing down.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="motion">
-    <div class="container">
-      <div class="series-header">
-        <div class="eyebrow">Series One</div>
-        <h2>Motion</h2>
-        <p class="series-copy">Built for sunshine, momentum, and the full spectrum of movement—from first cast to full send.</p>
-      </div>
-
-      <div class="grid-cards">
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>El Pescador Pils</h3>
-              <div class="beer-style">Pilsner • Lager</div>
-              <p class="beer-vibe">Crisp patience, coastal calm, first-cast energy.</p>
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#el-pescador-pils">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/el-pescador-pils.png" alt="El Pescador Pils label">
-            </div>
-          </div>
-        </article>
-
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Cruda Cruiser Lime Lager</h3>
-              <div class="beer-style">Lime Lager • Lager</div>
-              <p class="beer-vibe">Bright, social, crushable, and built for backyard recovery.</p>
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#cruda-cruiser-lime-lager">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/cruda-cruiser-lime-lager.png" alt="Cruda Cruiser Lime Lager label">
-            </div>
-          </div>
-        </article>
-
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Towhead Trail Wit</h3>
-              <div class="beer-style">Witbier • Ale</div>
-              <p class="beer-vibe">Citrus, sunshine, and easygoing exploration.</p> 
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#towhead-trail-wit">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/towhead-trail-wit.png" alt="Towhead Trail Wit label">
-            </div>
-          </div>
-        </article>
-
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Soft Pedal Hefeweizen</h3>
-              <div class="beer-style">Hefeweizen • Ale</div>
-              <p class="beer-vibe">Smooth wheat, banana-clove character, laid-back motion.</p>
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#soft-pedal-hefeweizen">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/soft-pedal-hefeweizen.png" alt="Soft Pedal Hefeweizen label">
-            </div>
-          </div>
-        </article>
-
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Punk Monkey IPA</h3>
-              <div class="beer-style">IPA • Ale</div>
-              <p class="beer-vibe">Fast, irreverent, and just a little unhinged.</p>
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#punk-monkey-ipa">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/punk-monkey-ipa.png" alt="Punk Monkey IPA label">
-            </div>
-          </div>
-        </article>
-
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Switchback Double IPA</h3>
-              <div class="beer-style">Double IPA • Ale</div>
-              <p class="beer-vibe">Technical, resinous, and controlled under pressure.</p>
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#switchback-double-ipa">View details →</a>
-            </div>
-          </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/switchback-double-ipa.png" alt="Switchback Double IPA label">
-            </div>
-          </div>
-        </article>
-
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Time Trial Triple IPA</h3>
-              <div class="beer-style">Triple IPA • Ale</div>
-              <p class="beer-vibe">Big intensity and maximum-output energy.</p>
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#time-trial-triple-ipa">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/time-trial-triple-ipa.png" alt="Time Trial Triple IPA label">
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section series-dark" id="stillness">
-    <div class="container">
-      <div class="series-header">
-        <div class="eyebrow">Series Two</div>
-        <h2>Stillness</h2>
-        <p class="series-copy">Firelight, moonlight, after-hours pours, and beers made for winding down without losing the story.</p>
-      </div>
-
-      <div class="grid-cards">
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Noche de Fogata</h3>
-              <div class="beer-style">Stout • Ale</div>
-              <p class="beer-vibe">Firelight, slow nights, and good company.</p>         
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#noche-de-fogata">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/noche-de-fogata.png" alt="Noche de Fogata label">
-            </div>
-          </div>
-        </article>
-
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Midnight Howler Porter</h3>
-              <div class="beer-style">Porter • Ale</div>
-              <p class="beer-vibe">Quiet moonlight, cocoa depth, and reflective calm.</p>
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#midnight-howler-porter">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/midnight-howler-porter.png" alt="Midnight Howler Porter label">
-            </div>
-          </div>
-        </article>
-
-        <article class="beer-card">
-          <div class="beer-card-main">
-            <div class="beer-card-text">
-              <h3>Barrel Bandit Bourbon Stout</h3>
-              <div class="beer-style">Bourbon Stout • Ale</div>
-              <p class="beer-vibe">After-hours indulgence with oak, bourbon, and warmth.</p>
-              <div class="beer-card-footer">
-                <a class="detail-link" href="#barrel-bandit-bourbon-stout">View details →</a>
-              </div>
-            </div>
-
-            <div class="beer-card-thumb">
-              <img src="images/barrel-bandit-bourbon-stout.png" alt="Barrel Bandit Bourbon Stout label">
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="details">
-    <div class="container">
-      <div class="series-header">
-        <div class="eyebrow">Beer details</div>
-        <h2>Meet the lineup</h2>
-        <p class="series-copy">
-          Each beer has its own audience, flavor profile, and visual lane. Swap the placeholders for your actual label art as the brand grows.
-        </p>
-      </div>
-
-      <div class="detail-grid" style="gap:1.25rem;">
-
-        <article class="detail-card" id="el-pescador-pils">
-          <div class="image-inner">
-            <img src="images/el-pescador-pils.png" alt="El Pescador Pils label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>El Pescador Pils</h3>
-            <p class="beer-style">Pilsner • Lager</p>
-            <p class="beer-vibe">Crisp patience, coastal calm, first-cast energy.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Early risers, fishing days, boat people, and anyone chasing a cold, easy first beer.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Crisp, clean, ultra-refreshing, with light herbal character and a bright finish.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Sunrise harbor tones, teal water, warm gold light, and a relaxed fishing scene on calm water.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="cruda-cruiser-lime-lager">
-          <div class="image-inner">
-            <img src="images/cruda-cruiser-lime-lager.png" alt="Cruda Cruiser Lime Lager label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Cruda Cruiser Lime Lager</h3>
-            <p class="beer-style">Lime Lager • Lager</p>
-            <p class="beer-vibe">Bright, social, crushable, and built for backyard recovery.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">BBQ crowd, beach-day drinkers, and the people looking for a cold reset after a long night.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Light, crisp, lime-forward, slightly sweet, and super crushable in hot weather.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Golden-hour beach tones, palm silhouettes, open posture, tropical accents, and pure Valley good vibes.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="towhead-trail-wit">
-          <div class="image-inner">
-            <img src="images/towhead-trail-wit.png" alt="Towhead Trail Wit label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Towhead Trail Wit</h3>
-            <p class="beer-style">Witbier • Ale</p>
-            <p class="beer-vibe">Citrus, sunshine, and easygoing exploration.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Casual craft drinkers, daytime explorers, and people who want something bright but not heavy.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Soft citrus, gentle spice, light body, and an airy finish that stays easy.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Bright greens, filtered sunlight, warm golds, and a white monkey moving curiously through the trees.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="soft-pedal-hefeweizen">
-          <div class="image-inner">
-            <img src="images/soft-pedal-hefeweizen.png" alt="Soft Pedal Hefeweizen label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Soft Pedal Hefeweizen</h3>
-            <p class="beer-style">Hefeweizen • Ale</p>
-            <p class="beer-vibe">Smooth wheat, banana-clove character, laid-back motion.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Patio drinkers, conversation crowd, and anyone looking for relaxed, low-pressure beer energy.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Smooth wheat body, soft haze, banana and clove notes, and a very gentle finish.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Warm diffused light, soft movement, relaxed expression, and a cruising scene that feels effortless.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="punk-monkey-ipa">
-          <div class="image-inner">
-            <img src="images/punk-monkey-ipa.png" alt="Punk Monkey IPA label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Punk Monkey IPA</h3>
-            <p class="beer-style">IPA • Ale</p>
-            <p class="beer-vibe">Fast, irreverent, and just a little unhinged.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Hop lovers, high-energy drinkers, and the crowd that wants the beer with the loudest personality.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Bold citrus, pine, noticeable bitterness, and a punchy finish with real attitude.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Dynamic motion, dirt flying, high contrast, mohawk energy, and a sense of beautiful chaos.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="switchback-double-ipa">
-          <div class="image-inner">
-            <img src="images/switchback-double-ipa.png" alt="Switchback Double IPA label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Switchback Double IPA</h3>
-            <p class="beer-style">Double IPA • Ale</p>
-            <p class="beer-vibe">Technical, resinous, and controlled under pressure.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Experienced craft drinkers, IPA loyalists, and people who appreciate intensity with control.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Resinous, tropical, fuller-bodied, and stronger than Punk Monkey without losing balance.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Mountain terrain, tight corners, technical riding posture, and a sharper sense of line and control.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="time-trial-triple-ipa">
-          <div class="image-inner">
-            <img src="images/time-trial-triple-ipa.png" alt="Time Trial Triple IPA label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Time Trial Triple IPA</h3>
-            <p class="beer-style">Triple IPA • Ale</p>
-            <p class="beer-vibe">Big intensity and maximum-output energy.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Hardcore IPA drinkers and the people who always ask for the biggest beer on the board.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Huge hop character, alcohol warmth, bold bitterness, and a finish built for slow sips.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Forward lean, dramatic light, strong speed cues, and a peak-performance feel from edge to edge.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="noche-de-fogata">
-          <div class="image-inner">
-            <img src="images/noche-de-fogata.png" alt="Noche de Fogata label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Noche de Fogata</h3>
-            <p class="beer-style">Stout • Ale</p>
-            <p class="beer-vibe">Firelight, slow nights, and good company.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Backyard night crowd, social slow-sippers, and people who want warmth without heaviness.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Roasty, smooth, lightly chocolatey, and easy-drinking for a dark beer.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Amber firelight, deep browns, backyard fogata atmosphere, and a grounded, inviting night scene.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="midnight-howler-porter">
-          <div class="image-inner">
-            <img src="images/midnight-howler-porter.png" alt="Midnight Howler Porter label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Midnight Howler Porter</h3>
-            <p class="beer-style">Porter • Ale</p>
-            <p class="beer-vibe">Quiet moonlight, cocoa depth, and reflective calm.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Late-night thinkers, solo drinkers, and people looking for one quiet, thoughtful pour.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Cocoa, roast, smooth texture, and a balanced finish that stays calm instead of heavy.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Cool moonlight tones, dark forest atmosphere, subtle motion, and a still, cinematic nighttime mood.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="detail-card" id="barrel-bandit-bourbon-stout">
-          <div class="image-inner">
-            <img src="images/barrel-bandit-bourbon-stout.png" alt="Barrel Bandit Bourbon Stout label" onerror="this.parentNode.innerHTML='Upload beer label image here'; this.parentNode.className='image-placeholder';">
-          </div>
-          <div>
-            <div class="eyebrow">Beer detail</div>
-            <h3>Barrel Bandit Bourbon Stout</h3>
-            <p class="beer-style">Bourbon Stout • Ale</p>
-            <p class="beer-vibe">Rich, complex flavors with a smooth finish.</p>
-            <div class="detail-columns">
-              <div>
-                <div class="detail-label">Audience</div>
-                <div class="detail-text">Bourbon lovers, stout enthusiasts, and those who appreciate a well-aged beer.</div>
-              </div>
-              <div>
-                <div class="detail-label">Flavor</div>
-                <div class="detail-text">Notes of vanilla, oak, and dark chocolate with a lingering warmth.</div>
-              </div>
-              <div>
-                <div class="detail-label">Visual direction</div>
-                <div class="detail-text">Deep amber tones, wood grain textures, and a sophisticated, aged appearance.</div>
-              </div>
-            </div>
-          </div>
-        </article>
-    
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="story">
-    <div class="container">
-      <div class="series-header">
-        <div class="eyebrow">Our story</div>
-        <h2>Born in the outdoors. Rooted in Weslaco.</h2>
-        <p class="series-copy">
-          lowcase Brewing blends Pacific Northwest exploration with South Texas hospitality—trail days, harbor mornings,
-          backyard fogatas, and slow nights with good company.
-        </p>
-      </div>
-
-      <div class="grid-3">
-        <article class="card">
-          <div class="eyebrow">The name</div>
-          <h3>lowcase is Weslaco.</h3>
-          <p>
-            Often understated, never flashy, always easygoing. lowcase Brewing is a nod to the heart of the Rio Grande Valley where we brew it.
-          </p>
-        </article>
-        <article class="card">
-          <div class="eyebrow">The vibe</div>
-          <h3>From trailheads to backyard hangs.</h3>
-          <p>
-            It’s a ride before sunset, a cast at first light, and a fire after dark. Our beers are designed and crafted for those moments.
-          </p>
-        </article>
-        <article class="card">
-          <div class="eyebrow">The beer</div>
-          <h3>Every beer is a moment.</h3>
-          <p>
-            From El Pescador at sunrise to Barrel Bandit after hours, each beer we make captures a mood and a reason to reach for it.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-inner">
-      <div><strong style="color:#1c1917;">lowcase Brewing</strong> • Weslaco, Texas</div>
-      <div class="footer-links">
-        <a href="#motion">Beer lineup</a>
-        <a href="#story">Brand story</a>
-        <a href="#top">Back to top</a>
-      </div>
-    </div>
-  </footer>
+  </main>
 </body>
 </html>
