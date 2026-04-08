@@ -2,33 +2,42 @@
 layout: default
 ---
 
-<section class="section">
-  <div class="container">
-
-    <div class="detail-card">
-      
-      <div class="image-inner">
+<main class="beer-page">
+  <section class="beer-shell">
+    <article class="beer-card">
+      <div class="beer-card__image">
         <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
       </div>
 
-      <div>
-        <div class="eyebrow">{{ page.series }} Series</div>
-        <h1>{{ page.title }}</h1>
-        <div class="beer-style">{{ page.style }}</div>
-        <div class="beer-vibe">{{ page.vibe }}</div>
+      <div class="beer-card__content">
+        <div class="beer-card__eyebrow">{{ page.series }} Series</div>
+        <h1 class="beer-card__title">{{ page.title }}</h1>
+        <div class="beer-card__style">{{ page.style }}</div>
+        <p class="beer-card__vibe">{{ page.vibe }}</p>
 
-        <div class="detail-columns">
-          <div><span class="detail-label">ABV</span><br>{{ page.abv }}</div>
-          <div><span class="detail-label">IBU</span><br>{{ page.ibu }}</div>
-          <div><span class="detail-label">Color</span><br>{{ page.color }}</div>
+        <div class="beer-stats">
+          <div class="beer-stat">
+            <span class="beer-stat__label">ABV</span>
+            <span class="beer-stat__value">{{ page.abv }}</span>
+          </div>
+          <div class="beer-stat">
+            <span class="beer-stat__label">IBU</span>
+            <span class="beer-stat__value">{{ page.ibu }}</span>
+          </div>
+          <div class="beer-stat">
+            <span class="beer-stat__label">Color</span>
+            <span class="beer-stat__value">{{ page.color }}</span>
+          </div>
         </div>
 
-        <p class="detail-text">
+        <div class="beer-card__body">
           {{ content }}
-        </p>
+        </div>
+
+        <div class="beer-card__actions">
+          <a href="{{ '/' | relative_url }}" class="beer-link">Back to Home</a>
+        </div>
       </div>
-
-    </div>
-
-  </div>
-</section>
+    </article>
+  </section>
+</main>
