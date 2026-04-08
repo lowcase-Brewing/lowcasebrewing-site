@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<section class="section">
+  <div class="container">
+
+    <div class="detail-card">
+      
+      <div class="image-inner">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+      </div>
+
+      <div>
+        <div class="eyebrow">{{ page.series }} Series</div>
+        <h1>{{ page.title }}</h1>
+        <div class="beer-style">{{ page.style }}</div>
+        <div class="beer-vibe">{{ page.vibe }}</div>
+
+        <div class="detail-columns">
+          <div><span class="detail-label">ABV</span><br>{{ page.abv }}</div>
+          <div><span class="detail-label">IBU</span><br>{{ page.ibu }}</div>
+          <div><span class="detail-label">Color</span><br>{{ page.color }}</div>
+        </div>
+
+        <p class="detail-text">
+          {{ content }}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
