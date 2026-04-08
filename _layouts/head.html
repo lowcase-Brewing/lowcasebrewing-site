@@ -21,6 +21,9 @@
   <meta name="description" content="lowcase Brewing — Coming soon from Weslaco, Texas." />
 
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  {% if page.layout == "beer" %}
+  <link rel="stylesheet" href="{{ '/assets/css/beer.css' | relative_url }}">
+  {% endif %}
 
   <!-- Self-contained styles to ensure this page renders correctly on its own -->
   <style>
