@@ -1,0 +1,153 @@
+<!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWKE25W3J4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWKE25W3J4');
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TFMFWD7S');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ page.title | default: "lowcase Brewing — Coming Soon" }}</title>
+<meta name="description" content="lowcase Brewing — Coming soon from Weslaco, Texas." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #f7f4ef;
+    --text: #292524;
+    --text-soft: #57534e;
+    --border: #e7e5e4;
+    --accent: #92400e;
+    --shadow: 0 18px 50px rgba(28,25,23,0.08);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: linear-gradient(135deg, #f5f5f4 0%, #fff7ed 45%, #f0f9ff 100%);
+  }
+
+  .page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page::before,
+  .page::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(80px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .page::before {
+    width: 320px;
+    height: 320px;
+    background: #fde68a;
+    left: -80px;
+    top: 60px;
+  }
+
+  .page::after {
+    width: 360px;
+    height: 360px;
+    background: #bae6fd;
+    right: -80px;
+    top: -40px;
+  }
+
+  .card {
+    position: relative;
+    width: min(720px, 100%);
+    padding: 3rem 2rem;
+    border-radius: 32px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  .logo {
+    height: 110px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+  }
+
+  .tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #78716c;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    letter-spacing: -0.04em;
+  }
+
+  .copy {
+    max-width: 560px;
+    margin: 1.25rem auto 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-soft);
+  }
+
+  .pill {
+    display: inline-block;
+    margin-top: 1.75rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid #d6d3d1;
+    background: rgba(255,255,255,0.75);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #57534e;
+  }
+
+  .footer {
+    margin-top: 1.75rem;
+    font-size: 0.95rem;
+    color: #57534e;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      padding: 2.25rem 1.25rem;
+    }
+
+    .logo {
+      height: 85px;
+    }
+  }
+</style>
