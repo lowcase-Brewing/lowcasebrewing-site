@@ -7,7 +7,7 @@ abv: 4.8%
 ibu: 20
 vibe: Crisp, clean, refreshing
 color: Pale gold
-image: /assets/images/el-pescador-pils.png
+image: /assets/images/labels/el-pescador-pils.png
 permalink: /beers/el-pescador/
 ---
 

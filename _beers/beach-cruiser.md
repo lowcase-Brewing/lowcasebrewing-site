@@ -7,7 +7,7 @@ abv: 4.8%
 ibu: 15
 vibe: Crisp, citrus, easy riding
 color: Pale gold
-image: /assets/images/cruda-cruiser-lime-lager.png
+image: /assets/images/labels/cruda-cruiser-lime-lager.png
 permalink: /beers/beach-cruiser/
 ---
 
