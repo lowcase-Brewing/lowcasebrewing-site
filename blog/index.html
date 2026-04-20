@@ -1,0 +1,28 @@
+---
+layout: default
+title: lowcase Brewing Blog
+---
+
+<main class="page">
+  <div class="card">
+    <div class="tagline">lowcase Brewing • Brew Log</div>
+    <h1>Blog</h1>
+    <p class="copy">
+      Notes from brew days, fermentation updates, recipe tweaks, and whatever else happens along the way.
+    </p>
+
+    <div class="blog-content">
+      {% for post in site.posts %}
+        <article class="blog-post">
+          <h2>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <div class="blog-meta">
+            <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+          </div>
+          <p>{{ post.excerpt }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</main>
