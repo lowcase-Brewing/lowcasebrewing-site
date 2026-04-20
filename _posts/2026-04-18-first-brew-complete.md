@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Batch Complete!
+title: First Brew Complete!
 ---
 
 The first lowcase Brewing batch is officially complete!
