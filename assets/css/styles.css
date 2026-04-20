@@ -379,6 +379,82 @@ h3 { font-size: 1.4rem; }
   }
 }
 
+.post-page {
+  min-height: 100vh;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(135deg, #f5f5f4 0%, #fff7ed 45%, #f0f9ff 100%);
+}
+
+.post-shell {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.post-card {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+}
+
+.post-title {
+  margin: 0.25rem 0 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.post-meta {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.post-body {
+  margin-top: 2rem;
+  max-width: 68ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: #44403c;
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+.post-body p:first-child {
+  margin-top: 0;
+}
+
+.post-body h2,
+.post-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-body ul,
+.post-body ol {
+  padding-left: 1.5rem;
+}
+
+.post-footer {
+  margin-top: 2.25rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .post-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .post-body {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
+
 @media (max-width: 860px) {
   .beer-card {
     grid-template-columns: 1fr;

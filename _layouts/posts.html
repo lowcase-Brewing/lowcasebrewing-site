@@ -1,0 +1,33 @@
+---
+layout: nil
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include gtm-body.html %}
+
+  <main class="post-page">
+    <section class="post-shell">
+      <article class="post-card">
+        <div class="tagline">lowcase Brewing • Brew Log</div>
+        <h1 class="post-title">{{ page.title }}</h1>
+
+        <div class="post-meta">
+          <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+        </div>
+
+        <div class="post-body">
+          {{ content }}
+        </div>
+
+        <div class="post-footer">
+          <a href="{{ '/blog/' | relative_url }}" class="beer-back-link">Back to Brew Log</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
