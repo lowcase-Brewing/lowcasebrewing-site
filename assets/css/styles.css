@@ -434,6 +434,13 @@ h3 { font-size: 1.4rem; }
   text-align: center;
 }
 
+.post-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
   .post-card {
     padding: 2rem 1.25rem;
@@ -586,17 +593,6 @@ h3 { font-size: 1.4rem; }
   color: var(--text);
 }
 
-@media (max-width: 768px) {
-  .blog-link-card {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .blog-link-logo {
-    width: 90px;
-  }
-}
-
 .brand-row {
   display: flex;
   align-items: center;
@@ -697,4 +693,15 @@ h3 { font-size: 1.4rem; }
   margin-bottom: 0.75rem;
   color: var(--text-soft);
   font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .blog-link-card {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .blog-link-logo {
+    width: 90px;
+  }
 }
