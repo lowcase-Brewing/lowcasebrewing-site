@@ -95,12 +95,37 @@ h3 { font-size: 1.4rem; }
   letter-spacing: 0.2em;
 }
 
-.button-row { margin-top: 1.5rem; display: flex; gap: 1rem; }
-.button { padding: 0.8rem 1.2rem; border-radius: 16px; border: 1px solid #d6d3d1; }
-.button.primary { background: #1c1917; color: white; }
+.button-row {
+  margin-top: 1.5rem;
+  display: flex; gap: 1rem;
+}
 
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.grid-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.button-row--center {
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 16px;
+  border: 1px solid #d6d3d1;
+}
+
+.button.primary {
+  background: #1c1917; color: white;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
 
 .card, .beer-card {
   background: var(--card);
