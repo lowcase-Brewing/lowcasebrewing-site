@@ -669,11 +669,12 @@ h3 { font-size: 1.4rem; }
 }
 
 .blog-instagram-link {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: #a8a29e;
   text-decoration: none;
+  white-space: nowrap;
   transition: all 0.2s ease;
 }
 
