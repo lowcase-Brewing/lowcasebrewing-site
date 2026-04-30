@@ -743,6 +743,19 @@ h3 {
   line-height: 1.75;
 }
 
+.labs-image {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.labs-image img {
+  max-width: 140px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
 .ruckus-notes {
   margin-top: 1rem;
   color: var(--accent);

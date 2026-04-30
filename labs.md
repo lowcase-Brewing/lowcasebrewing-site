@@ -25,30 +25,46 @@ permalink: /labs/
   </div>
 
   <section class="labs-grid">
+    {% assign lab_batches = site.labs | sort: "batch" %}
 
-    <article class="labs-card">
-      <div class="labs-status">In Development</div>
+    {% for lab in lab_batches %}
+      <article class="labs-card">
+        {% if lab.status %}
+          <div class="labs-status">{{ lab.status }}</div>
+        {% endif %}
 
-      <h2>Agave Drift</h2>
-      <p class="labs-style">Agave Ferment • BJCP 34C Experimental</p>
+        <h2>{{ lab.title }}</h2>
 
-      <div class="labs-stats">
-        <span>ABV ~9%</span>
-        <span>IBU 0</span>
-        <span>OG 1.065–1.070</span>
-        <span>FG 0.998–1.002</span>
-      </div>
+        {% if lab.style %}
+          <p class="labs-style">{{ lab.style }}</p>
+        {% endif %}
 
-      <p>
-        A dry, sun-soaked agave ferment made with 100% blue agave, lime zest,
-        and a tiny pinch of sea salt. Light-bodied, crisp, experimental, and
-        just reckless enough to earn the Labs badge.
-      </p>
+        {% if lab.image %}
+          <div class="labs-image">
+            <img src="{{ lab.image | relative_url }}" alt="{{ lab.title }}">
+          </div>
+        {% endif %}
 
-      <p class="ruckus-notes">
-        <strong>Ruckus Notes:</strong> Drift wild. Sip free.
-      </p>
-    </article>
+        <div class="labs-stats">
+          {% if lab.abv %}<span>ABV {{ lab.abv }}</span>{% endif %}
+          {% if lab.ibu %}<span>IBU {{ lab.ibu }}</span>{% endif %}
+          {% if lab.og %}<span>OG {{ lab.og }}</span>{% endif %}
+          {% if lab.fg %}<span>FG {{ lab.fg }}</span>{% endif %}
+          {% if lab.srm %}<span>SRM {{ lab.srm }}</span>{% endif %}
+        </div>
 
+        {{ lab.excerpt }}
+
+        {% if lab.ruckus_notes %}
+          <p class="ruckus-notes">
+            <strong>Ruckus Notes:</strong> {{ lab.ruckus_notes }}
+          </p>
+        {% endif %}
+
+        <div class="labs-card-footer">
+          <a href="{{ lab.url | relative_url }}" class="beer-link">View Experiment →</a>
+        </div>
+      </article>
+    {% endfor %}
   </section>
 </main>

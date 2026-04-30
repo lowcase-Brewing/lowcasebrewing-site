@@ -32,6 +32,10 @@ collections:
     output: true
     permalink: /beers/:name/
 
+  labs:
+    output: true
+    permalink: /labs/:name/
+
 defaults:
   - scope:
       path: ""
