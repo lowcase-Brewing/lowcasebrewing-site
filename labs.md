@@ -7,7 +7,7 @@ permalink: /labs/
 <main class="labs-page">
   <section class="labs-hero">
     <img
-      src="{{ '/assets/images/lowcase-labs-logo.png' | relative_url }}"
+      src="{{ '/assets/images/logos/lowcase-labs-logo.png' | relative_url }}"
       alt="lowcase Labs"
       class="labs-logo"
     />
