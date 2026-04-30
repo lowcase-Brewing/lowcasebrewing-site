@@ -8,6 +8,7 @@ ibu: "0"
 og: "1.065–1.070"
 fg: "0.998–1.002"
 srm: "1–3"
+vibe: "Dry, bright, sun-soaked"
 image: "/assets/images/labs/agave-drift.png"
 ---
 

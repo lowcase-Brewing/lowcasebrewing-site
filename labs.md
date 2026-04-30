@@ -46,17 +46,19 @@ permalink: /labs/
             <p class="labs-style">{{ lab.style }}</p>
           {% endif %}
 
-          <div class="labs-stats">
-            {% if lab.abv %}<span>ABV {{ lab.abv }}</span>{% endif %}
-            {% if lab.ibu %}<span>IBU {{ lab.ibu }}</span>{% endif %}
-            {% if lab.og %}<span>OG {{ lab.og }}</span>{% endif %}
-            {% if lab.fg %}<span>FG {{ lab.fg }}</span>{% endif %}
-            {% if lab.srm %}<span>SRM {{ lab.srm }}</span>{% endif %}
+          <div class="labs-meta">
+            {% if lab.abv %}<div><strong>ABV</strong> {{ lab.abv }}</div>{% endif %}
+            {% if lab.ibu %}<div><strong>IBU</strong> {{ lab.ibu }}</div>{% endif %}
+            {% if lab.srm %}<div><strong>Color</strong> {{ lab.srm }}</div>{% endif %}
           </div>
 
           <div class="labs-summary">
             {{ lab.excerpt }}
           </div>
+
+          {% if lab.vibe %}
+            <p class="labs-vibe">{{ lab.vibe }}</p>
+          {% endif %}
 
           {% if lab.ruckus_notes %}
             <p class="ruckus-notes">
