@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<main class="beer-page">
+  <section class="beer-shell">
+
+    <article class="beer-showcase">
+
+      <!-- Image -->
+      <div class="beer-showcase__image">
+        <div class="beer-showcase__image-frame">
+          {% if page.image %}
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="beer-showcase__content">
+
+        <!-- Eyebrow -->
+        <div class="beer-showcase__eyebrow">
+          lowcase Labs • Experimental
+        </div>
+
+        <!-- Title -->
+        <h1 class="beer-showcase__title">
+          {{ page.title }}
+        </h1>
+
+        <!-- Style -->
+        {% if page.style %}
+          <div class="beer-showcase__style">
+            {{ page.style }}
+          </div>
+        {% endif %}
+
+        <!-- Vibe -->
+        {% if page.vibe %}
+          <div class="beer-showcase__vibe">
+            {{ page.vibe }}
+          </div>
+        {% endif %}
+
+        <!-- Stats -->
+        <div class="beer-showcase__stats">
+          {% if page.abv %}
+            <div class="beer-stat">
+              <span class="beer-stat__label">ABV</span>
+              <span class="beer-stat__value">{{ page.abv }}</span>
+            </div>
+          {% endif %}
+
+          {% if page.ibu %}
+            <div class="beer-stat">
+              <span class="beer-stat__label">IBU</span>
+              <span class="beer-stat__value">{{ page.ibu }}</span>
+            </div>
+          {% endif %}
+
+          {% if page.srm %}
+            <div class="beer-stat">
+              <span class="beer-stat__label">Color</span>
+              <span class="beer-stat__value">{{ page.srm }}</span>
+            </div>
+          {% endif %}
+        </div>
+
+        <!-- Body -->
+        <div class="beer-showcase__body">
+          {{ content }}
+        </div>
+
+        <!-- Ruckus Notes -->
+        {% if page.ruckus_notes %}
+          <div class="beer-showcase__body">
+            <p><strong>Ruckus Notes:</strong> {{ page.ruckus_notes }}</p>
+          </div>
+        {% endif %}
+
+        <!-- Back Link -->
+        <div class="beer-showcase__footer">
+          <a href="{{ '/labs/' | relative_url }}" class="beer-back-link">
+            ← Back to Labs
+          </a>
+        </div>
+
+      </div>
+    </article>
+
+  </section>
+</main>
