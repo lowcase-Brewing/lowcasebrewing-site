@@ -20,6 +20,10 @@ permalink: /labs/
     </p>
   </section>
 
+  <div style="text-align: center; margin-bottom: 1.5rem;">
+    <a href="{{ '/' | relative_url }}" class="beer-back-link">← Back to Home</a>
+  </div>
+
   <section class="labs-grid">
 
     <article class="labs-card">
