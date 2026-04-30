@@ -28,41 +28,45 @@ permalink: /labs/
     {% assign lab_batches = site.labs | sort: "batch" %}
 
     {% for lab in lab_batches %}
-      <article class="labs-card">
-        {% if lab.status %}
-          <div class="labs-status">{{ lab.status }}</div>
-        {% endif %}
-
-        <h2>{{ lab.title }}</h2>
-
-        {% if lab.style %}
-          <p class="labs-style">{{ lab.style }}</p>
-        {% endif %}
-
-        {% if lab.image %}
-          <div class="labs-image">
+      <article class="labs-card labs-showcase-card">
+        <div class="labs-showcase-card__image">
+          {% if lab.image %}
             <img src="{{ lab.image | relative_url }}" alt="{{ lab.title }}">
-          </div>
-        {% endif %}
-
-        <div class="labs-stats">
-          {% if lab.abv %}<span>ABV {{ lab.abv }}</span>{% endif %}
-          {% if lab.ibu %}<span>IBU {{ lab.ibu }}</span>{% endif %}
-          {% if lab.og %}<span>OG {{ lab.og }}</span>{% endif %}
-          {% if lab.fg %}<span>FG {{ lab.fg }}</span>{% endif %}
-          {% if lab.srm %}<span>SRM {{ lab.srm }}</span>{% endif %}
+          {% endif %}
         </div>
 
-        {{ lab.excerpt }}
+        <div class="labs-showcase-card__content">
+          {% if lab.status %}
+            <div class="labs-status">{{ lab.status }}</div>
+          {% endif %}
 
-        {% if lab.ruckus_notes %}
-          <p class="ruckus-notes">
-            <strong>Ruckus Notes:</strong> {{ lab.ruckus_notes }}
-          </p>
-        {% endif %}
+          <h2>{{ lab.title }}</h2>
 
-        <div class="labs-card-footer">
-          <a href="{{ lab.url | relative_url }}" class="beer-link">View Experiment →</a>
+          {% if lab.style %}
+            <p class="labs-style">{{ lab.style }}</p>
+          {% endif %}
+
+          <div class="labs-stats">
+            {% if lab.abv %}<span>ABV {{ lab.abv }}</span>{% endif %}
+            {% if lab.ibu %}<span>IBU {{ lab.ibu }}</span>{% endif %}
+            {% if lab.og %}<span>OG {{ lab.og }}</span>{% endif %}
+            {% if lab.fg %}<span>FG {{ lab.fg }}</span>{% endif %}
+            {% if lab.srm %}<span>SRM {{ lab.srm }}</span>{% endif %}
+          </div>
+
+          <div class="labs-summary">
+            {{ lab.excerpt }}
+          </div>
+
+          {% if lab.ruckus_notes %}
+            <p class="ruckus-notes">
+              <strong>Ruckus Notes:</strong> {{ lab.ruckus_notes }}
+            </p>
+          {% endif %}
+
+          <div class="labs-card-footer">
+            <a href="{{ lab.url | relative_url }}" class="beer-link">View Experiment →</a>
+          </div>
         </div>
       </article>
     {% endfor %}
