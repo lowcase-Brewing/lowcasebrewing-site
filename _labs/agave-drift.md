@@ -11,7 +11,27 @@ srm: "1–3"
 image: "/assets/images/labs/agave-drift.png"
 vibe: "Dry, bright, sun-soaked"
 layout: lab
-ruckus_notes: "This one is for summer afternoons on the porch with your compas. Make sure you share it güey!"
+ruckus_notes: "This one’s for summer afternoons on the porch with your compas. Don’t hoard it—share it, güey."
 ---
 
-A dry, sun-soaked agave ferment made with 100% blue agave, lime zest, and a tiny pinch of sea salt. Light-bodied, crisp, experimental, and just reckless enough to earn the Labs badge.
+## Overview
+A dry, sun-soaked agave ferment built on 100% blue agave, bright lime zest, and a subtle pinch of sea salt. Clean, crisp, and just a little wild.
+
+This is our first run in lowcase Labs — a test of how far we can push a clean, sugar-driven ferment while keeping it refreshing and drinkable.
+
+## Batch Notes
+Batch 01 — Initial formulation targeting ~9% ABV with a dry finish.
+
+## Process Notes
+- 100% blue agave nectar
+- Fermented with D-47 at 68°F
+- Nutrient additions at pitch + 24h
+
+## Tasting Notes
+- Very dry finish
+- Light citrus brightness
+- Slight mineral/saline edge
+
+## What I’d Change Next Batch
+- Slightly lower OG for more drinkability
+- Consider orange zest instead of lime
