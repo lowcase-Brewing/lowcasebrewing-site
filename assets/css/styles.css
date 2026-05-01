@@ -266,6 +266,7 @@ h3 {
   gap: 2.75rem;
   padding: 2.75rem;
   background: rgba(255, 255, 255, 0.85);
+  align-items: flex-start;
 }
 
 .beer-card__image,
