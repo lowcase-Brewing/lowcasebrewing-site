@@ -13,4 +13,4 @@ permalink: /beers/el-pescador/
 
 Crisp and clean, El Pescador is made for early morning fishing days on the harbor.
 
-Brewed with a Pilsner malts and hops with a light herbal character and bright finish, this beer is a perfect way to refresh on long days on the water.
+Brewed with Vienna malt and Saaz hops, this pils brings a light herbal note and a bright, crisp finish—made for long days on the water.
