@@ -164,6 +164,15 @@
   line-height: 1.8;
 }
 
+.beer-showcase__body h2,
+.beer-showcase__body h3 {
+  margin-bottom: 0.5rem;
+}
+
+.beer-showcase__body ul {
+  margin-top: 0.5rem;
+}
+
 .beer-showcase__body p:first-child {
   margin-top: 0;
 }
