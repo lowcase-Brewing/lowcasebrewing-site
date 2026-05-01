@@ -32,6 +32,6 @@ Batch 01 — Initial formulation targeting ~9% ABV with a dry finish.
 - Light citrus brightness
 - Slight mineral/saline edge
 
-## What I’d Change Next Batch
+## For The Next Batch
 - Slightly lower OG for more drinkability
 - Consider orange zest instead of lime
