@@ -19,4 +19,4 @@ This Brew Log is where it all gets documented—the wins, the misses, the lesson
 
 It’s early. It’s not perfect. But it’s underway.
 
-Stay low.
+stay low.
