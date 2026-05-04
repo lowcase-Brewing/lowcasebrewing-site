@@ -8,7 +8,7 @@ ibu: 20
 vibe: Crisp, clean, refreshing
 color: Pale gold
 image: /assets/images/labels/el-pescador-pils.png
-permalink: /beers/el-pescador/
+permalink: /beers/el-pescador-pils/
 ---
 
 Crisp and clean, El Pescador is made for early morning fishing days on the harbor.
