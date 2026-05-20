@@ -74,6 +74,15 @@ body > * {
   z-index: 1;
 }
 
+.page {
+  background: transparent;
+}
+
+.page::before,
+.page::after {
+  opacity: 0.18;
+}
+
 h1 {
   font-size: clamp(2.6rem, 5vw, 5rem);
 }
