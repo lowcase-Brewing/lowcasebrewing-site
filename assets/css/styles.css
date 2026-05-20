@@ -6,8 +6,8 @@
    01. Design Tokens
    ------------------------- */
 :root {
-  --bg: #ecfeef;
-  --bg-soft: #ecfeef;
+  --bg: #17211c;
+  --bg-soft: #1f2d24;
   --card: rgba(255, 255, 255, 0.82);
   --card-dark: rgba(255, 255, 255, 0.06);
   --text: #292524;
@@ -52,8 +52,26 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top, rgba(217, 164, 65, 0.16), transparent 34rem),
+    linear-gradient(180deg, #17211c 0%, #223229 45%, #2d3d34 100%);
   color: var(--text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 18px 18px;
+  z-index: -1;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -226,7 +244,7 @@ h3 {
    06. Hero
    ------------------------- */
 .hero {
-  background: var(--bg-soft);
+  background: transparent;
   border-bottom: 1px solid var(--border);
 }
 
@@ -704,7 +722,7 @@ h3 {
   margin: 0 auto;
   font-size: 1.15rem;
   line-height: 1.7;
-  color: #44403c;
+  color: var(--text-dark-soft);
 }
 
 .labs-grid {
