@@ -988,3 +988,17 @@ h3 {
     text-align: center;
   }
 }
+
+/* Homepage dusk background override */
+main.page,
+.page {
+  background: transparent !important;
+}
+
+main.page::before,
+main.page::after,
+.page::before,
+.page::after {
+  opacity: 0.12;
+  background: var(--accent-gold) !important;
+}
