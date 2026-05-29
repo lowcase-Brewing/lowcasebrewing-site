@@ -254,6 +254,15 @@ h3 {
   filter: brightness(1.05);
 }
 
+.blog-featured-image {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 1.5rem auto 2rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
 /* -------------------------
    06. Hero
    ------------------------- */
@@ -1022,3 +1031,4 @@ main.page > .card,
   border: 1px solid rgba(217, 164, 65, 0.28);
   box-shadow: var(--shadow-strong);
 }
+
