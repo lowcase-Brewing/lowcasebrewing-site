@@ -2,7 +2,7 @@
 layout: post
 title: El Pescador First Taste
 category: Brew Log
-image: /assets/images/blog/el-pescador/first-taste.jpg
+image: /assets/images/blog/first-taste.jpg
 ---
 The first taste test of El Pescador is officially in the books.
 
