@@ -20,8 +20,9 @@
 
 title: lowcase Brewing
 email: beer@lowcasebrewing.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Trail Tested • Texas Tuned
+description: >-
+  lowcase Brewing — Trail Tested • Texas Tuned.
+  Beer for slow days, good company, and wherever the trail leads.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lowcasebrewing.com" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -46,6 +47,7 @@ markdown: kramdown
 theme: null
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
