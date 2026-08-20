@@ -20,8 +20,8 @@
 
 title: lowcase Brewing
 email: beer@lowcasebrewing.com
+tagline: Trail Tested • Texas Tuned
 description: >-
-  lowcase Brewing — Trail Tested • Texas Tuned.
   Beer for slow days, good company, and wherever the trail leads.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lowcasebrewing.com" # the base hostname & protocol for your site, e.g. http://example.com
