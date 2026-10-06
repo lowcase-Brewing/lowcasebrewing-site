@@ -1,57 +1,50 @@
-# lowcase Brewing — complete source
+# lowcase Brewing
 
-The existing static website, with its design and content preserved.
-
-## Continue in another chat
-
-Upload this ZIP and ask:
-
-"Save these existing working files to the lowcase Brewing Sites project and publish it. Use project ID appgprj_6abc3d06a3b48191b65bd3dc5fe047ce. Preserve the existing design. Reuse the existing project; do not create a new site. Preserve its public access."
-
-## Continue on a different computer
-
-Log into ChatGPT with as the user who owns the lowcase Brewing site and ask:
-
-"Continue maintaining my existing lowcase Brewing Site, project ID appgprj_6abc3d06a3b48191b65bd3dc5fe047ce.
-Retrieve its latest source before editing. Preserve its design, domains, Google Analytics, and public access.
-Update this existing project rather than creating a new Site."
+This repo houses the static web site for lowcase Brewing (lowcasebrewing.com). The site is hosted through GitHub Pages and is deployed using GitHub Actions.
 
 ## Included files
 
-- .openai/hosting.json — Sites project identity, when present in a Sites checkout; not needed for GitHub Pages
 - dist/index.html — complete page content
 - dist/style.css — complete styling and responsive layouts
 - dist/journal.js — category filters and article dialogs
 - dist/assets/ — logos, beer labels, and generated photography
 
-This is a buildless static site. No dependency installation or build is required. Open dist/index.html to view it locally, or serve the dist folder with a local web server.
-
-The site is currently published through Sites. This repository prepares an independent GitHub Pages deployment for testing.
-
-No credentials or tokens are included. Obtain a fresh source-repository credential for the existing project through Sites.
+This is a static site with no application build step. No npm installation or Jekyll build is required. Use a local web server to preview it so navigation works as it does on the live site.
 
 Content includes real lowcase brew stories and external AHA recipe links.
 
-## GitHub Pages test deployment
+## GitHub Pages deployment
 
-In this repository's Settings > Pages, select **GitHub Actions** as the source.
-Leave the custom domain unset while testing; leave Namecheap DNS pointing to Sites.
-The workflow publishes `dist/` after copying it into a temporary `_pages/` folder.
-GitHub's reported base path is added to root-relative links in that copy, so both
-project URLs and a future custom domain work without changing the authored pages.
+The live site is available at https://lowcasebrewing.com. GitHub Pages redirects
+https://www.lowcasebrewing.com to that address.
 
-Push the reviewed changes to `main`, then inspect the Pages workflow in Actions.
-The resulting test URL is reported by the deployment; verify navigation, all four
-beer pages, notebook filters/dialogs, labels, and the favicon before changing DNS.
-If the account's main GitHub Pages site still has a custom domain, it can affect
-project-site URLs; clear that old association or use a dedicated test subdomain.
+The workflow in `.github/workflows/pages.yml` runs when changes are pushed to
+`main`, including when a pull request is merged into `main` on GitHub. A local
+commit alone does not deploy the site. You can also run the workflow manually
+from the repository's Actions tab.
 
-Local checks (use a fresh output directory for each run):
+The workflow uses `scripts/prepare-pages.py` to copy `dist/` into a temporary
+`_pages/` folder, exclude macOS metadata, and add `.nojekyll`. It uses GitHub's
+reported base path to adjust root-relative links in the deployment copy when
+needed. The current custom domain uses an empty base path; project URLs such as
+`/lowcasebrewing-site/` use a prefix. The authored files in `dist/` stay unchanged.
+
+Keep this script: it is part of the deployment workflow. `_pages/` is generated
+output and should not be committed.
+
+After publishing, check the workflow result in Actions and verify navigation,
+beer pages, notebook filters and stories, images, and the favicon on the live site.
+If the custom domain changes, run the workflow again to regenerate the site for
+its new URL.
+
+## Local preview
+
+From the repository root, run:
 
 ```sh
-python3 scripts/prepare-pages.py --base-path /lowcasebrewing-site --output /tmp/lowcase-pages-test
 python3 -m http.server 8000 --directory dist
 ```
 
-The local server previews source at the URL root. The deployment prepares paths
-for the actual Pages URL. No npm installation or Jekyll build is needed.
+Open http://localhost:8000 in your browser. Press Ctrl+C in the terminal to stop
+the server. The deployment preparation script does not need to be run for a
+normal local preview.
