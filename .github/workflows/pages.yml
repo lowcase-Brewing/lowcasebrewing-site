@@ -22,14 +22,21 @@ jobs:
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Prepare static site for its Pages URL
-        env:
-          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-        run: python3 scripts/prepare-pages.py --base-path "$PAGES_BASE_PATH"
+      - name: Verify restored Jekyll source
+        run: |
+          if [ ! -f _config.yml ]; then
+            echo "::error::Restore the old site's Jekyll source from site-backup before deploying. Missing _config.yml."
+            exit 1
+          fi
+      - name: Build Jekyll site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _pages
+          path: _site
           name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Publish site
         id: deployment

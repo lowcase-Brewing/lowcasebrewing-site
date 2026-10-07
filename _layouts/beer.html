@@ -1,0 +1,53 @@
+---
+layout: nil
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include gtm-body.html %}
+  <main class="beer-page">
+    <section class="beer-shell">
+      <article class="beer-showcase">
+        <div class="beer-showcase__image">
+          <div class="beer-showcase__image-frame">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+          </div>
+        </div>
+
+        <div class="beer-showcase__content">
+          <div class="beer-showcase__eyebrow">{{ page.series }} Series</div>
+          <h1 class="beer-showcase__title">{{ page.title }}</h1>
+          <div class="beer-showcase__style">{{ page.style }}</div>
+          <p class="beer-showcase__vibe">{{ page.vibe }}</p>
+
+          <div class="beer-showcase__stats">
+            <div class="beer-stat">
+              <span class="beer-stat__label">ABV</span>
+              <span class="beer-stat__value">{{ page.abv }}</span>
+            </div>
+            <div class="beer-stat">
+              <span class="beer-stat__label">IBU</span>
+              <span class="beer-stat__value">{{ page.ibu }}</span>
+            </div>
+            <div class="beer-stat">
+              <span class="beer-stat__label">Color</span>
+              <span class="beer-stat__value">{{ page.color }}</span>
+            </div>
+          </div>
+
+          <div class="beer-showcase__body">
+            {{ content }}
+          </div>
+
+          <div class="beer-showcase__footer">
+            <a href="{{ '/' | relative_url }}" class="beer-back-link">Back to Home</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
