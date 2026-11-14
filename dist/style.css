@@ -241,3 +241,7 @@ dialog{border:2px solid var(--pine);border-radius:10px;box-shadow:7px 7px 0 #122
 
 /* Keep the story aside in the same serif family as its heading. */
 .story-aside{font-family:Georgia,"Times New Roman",serif;font-style:italic;text-align:right;transform:none;margin-left:auto}
+
+/* Keep the homepage app link readable at narrow widths. */
+.top .home-nav{flex-wrap:wrap;row-gap:0}
+@media(max-width:440px){.top .home-nav{display:grid;grid-template-columns:repeat(2,max-content)}}
