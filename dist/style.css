@@ -241,3 +241,14 @@ dialog{border:2px solid var(--pine);border-radius:10px;box-shadow:7px 7px 0 #122
 
 /* Keep the story aside in the same serif family as its heading. */
 .story-aside{font-family:Georgia,"Times New Roman",serif;font-style:italic;text-align:right;transform:none;margin-left:auto}
+
+/* A quiet place for the belief at the heart of Our Story. */
+.story-manifesto{grid-column:1 / -1;background:var(--canvas);border-top:3px solid var(--amber);padding:56px clamp(24px,5vw,64px)}
+.manifesto-copy{max-width:700px;margin:auto}
+.story-manifesto .eyebrow{margin-bottom:24px}
+.story-manifesto h3{font:700 clamp(1.9rem,3.2vw,2.65rem)/1.2 Georgia,"Times New Roman",serif;letter-spacing:-.035em;margin:0 0 32px}
+.story-manifesto h3 em{display:block;margin-top:12px}
+.story-manifesto p:not(.eyebrow):not(.manifesto-closing){font-size:1.125rem;line-height:1.8;color:#435749;margin:0 0 22px}
+.story-manifesto .manifesto-memory{border-top:1px solid var(--line);padding-top:28px;margin-top:32px}
+.story-manifesto .manifesto-closing{font:700 clamp(1.45rem,2.4vw,1.9rem)/1.35 Georgia,"Times New Roman",serif;color:var(--pine);margin:0}
+@media(max-width:740px){.story-manifesto{padding:32px 24px}.story-manifesto h3{margin-bottom:24px}.story-manifesto p:not(.eyebrow):not(.manifesto-closing){font-size:1rem}.story-manifesto .manifesto-memory{padding-top:24px;margin-top:28px}}
